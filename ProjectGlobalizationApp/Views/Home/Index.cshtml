@@ -1,0 +1,40 @@
+﻿@using ProjectGlobalizationApp.Language;
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>@Lang.Saudacao</h2>
+
+<p>
+    <ul>
+        <li>
+            @Html.ActionLink(
+                Lang.InglesAmericano,             // linkText
+                "Index",                                    // actionName
+                "Home",                                     // controllerName
+                new { culture = "en-us" },                  // routeValues
+                null                                        // htmlAttributes
+            )
+        </li>
+        <li>
+            @Html.ActionLink(
+                Lang.EspanholEspanha,             // linkText
+                "Index",                                    // actionName
+                "Home",                                     // controllerName
+                new { culture = "es-es" },                  // routeValues
+                null                                        // htmlAttributes
+            )
+        </li>
+        <li>
+            @Html.ActionLink(
+                Lang.PortuguesBrasil,             // linkText
+                "Index",                                    // actionName
+                "Home",                                     // controllerName
+                new { culture = "pt-br" },                  // routeValues
+                null                                        // htmlAttributes
+            )
+        </li>
+    </ul>
+</p>
+
